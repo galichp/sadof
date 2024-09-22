@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography Course Catalog</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        /* Header styling */
+        .header {
+            background-color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header img {
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+        }
+        .header h1 {
+            font-size: 20px;
+            margin: 0;
+            color: #333;
+            font-weight: bold;
+        }
+        .catalog-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            flex-grow: 1;
+        }
+        .course-card {
+            background-color: white;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .course-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .course-card-content {
+            padding: 20px;
+            text-align: center;
+        }
+        .course-title {
+            font-size: 20px;
+            color: #333;
+        }
+        .course-description {
+            font-size: 16px;
+            color: #666;
+        }
+        .enroll-btn {
+            display: inline-block;
+            background-color: #ff6f61;
+            color: white;
+            padding: 10px 30px;
+            font-size: 16px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-top: 15px;
+            border-radius: 5px;
+        }
+        .enroll-btn:hover {
+            background-color: #e05547;
+        }
+        /* Hover effect for floating course cards */
+        .course-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .footer {
+            padding: 20px; /* Reduced padding */
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            text-align: center;
+            font-size: 14px; /* Smaller font size */
+            box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+		.copyrigths {
+			position: absolute;
+            left: 20px;
+            font-size: 14px;
+            color: #333;
+        }
+        .payment-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        .payment-icons img {
+            width: 50px;
+            height: auto;
+        }
+        .mailto {
+            position: absolute;
+            right: 20px;
+            font-size: 14px;
+            color: #333;
+        }
+        .mailto a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+        .mailto a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Wrapper for sticky footer -->
+<div class="wrapper">
+    <!-- Header aligned to the left with logo first -->
+    <div class="header">
+        <img src="resources/logo3.png" alt="SadofPro Logo">
+        <h1>Sasha Sadofeva Online Photography School</h1>
+    </div>
+
+    <!-- Course Catalog -->
+    <div class="catalog-container">
+        <div class="course-card">
+            <img src="resources/film1.jpg" alt="Fashion Photography Course">
+            <div class="course-card-content">
+                <h3 class="course-title">Fashion Photography Masterclass</h3>
+                <p class="course-description">Learn the secrets to capturing stunning, commercial-level fashion photographs.</p>
+                <a href="#" class="enroll-btn">Enroll Now</a>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <img src="resources/film2.jpg" alt="Lighting Techniques Course">
+            <div class="course-card-content">
+                <h3 class="course-title">Advanced Lighting Techniques</h3>
+                <p class="course-description">Master the use of studio lighting setups to enhance your photography.</p>
+                <a href="#" class="enroll-btn">Enroll Now</a>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <img src="resources/film3.jpg" alt="Creative Photoset Design">
+            <div class="course-card-content">
+                <h3 class="course-title">Creative Photoset Design</h3>
+                <p class="course-description">Learn how to produce visually striking photosets that stand out in the fashion industry.</p>
+                <a href="#" class="enroll-btn">Enroll Now</a>
+            </div>
+        </div>
+
+        <div class="course-card">
+            <img src="resources/film3.jpg" alt="Creative Photoset Design">
+            <div class="course-card-content">
+                <h3 class="course-title">Creative Photoset Design</h3>
+                <p class="course-description">Learn how to produce visually striking photosets that stand out in the fashion industry.</p>
+                <a href="#" class="enroll-btn">Enroll Now</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer with payment icons and mailto -->
+    <div class="footer">
+		<div class="copyrigths">
+            <p>&copy; 2024 SadofPro Photography Online School</p>
+		</div>
+        <div class="footer-content">
+            <p>We accept</p>
+            <div class="payment-icons">
+                <img src="resources/benefit2.png" alt="Benefit debit cards">
+                <img src="resources/master-card2.png" alt="Mastercard">
+                <img src="resources/visa1.png" alt="Visa">
+            </div>
+        </div>
+        <div class="mailto">
+			<div>Questions? Write us</div>
+            <a href="mailto:contact@example.com">sadofeva.sasha@gmail.com</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
